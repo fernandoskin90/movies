@@ -1,0 +1,23 @@
+@mixin tooltip($text) {
+  &:hover::before {
+    content: $text;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    padding: 5px;
+    left: -20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  &:hover::after {
+    content: '';
+    position: absolute;
+    bottom: calc(100% - 6px);
+    left: 8px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 8px 5px;
+    border-top-color: rgba(0, 0, 0, 0.8);
+  }
+}

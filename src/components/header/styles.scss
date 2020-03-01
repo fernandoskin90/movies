@@ -1,0 +1,15 @@
+.movies-header {
+  align-items: center;
+  background-color: $header-background-color;
+  display: flex;
+  font-size: 1.4rem;
+  height: $header-height;
+  padding-left: 20px;
+  position: relative;
+  text-transform: uppercase;
+
+  &__logo {
+    color: white;
+    text-decoration: none;
+  }
+}

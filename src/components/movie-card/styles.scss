@@ -1,0 +1,44 @@
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  position: relative;
+  width: 250px;
+
+  outline: solid 1px gray;
+
+  &__poster {
+    height: 90%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+  }
+
+  &__vote-average,
+  &__vote-count {
+    background-color: #007afe;
+    border-radius: 10px;
+    color: #fff;
+    padding: 2px 4px;
+    position: absolute;
+    top: 82.5%;
+  }
+
+  &__vote-average {
+    @include tooltip('Vote Average');
+    right: 10%;
+  }
+
+  &__vote-count {
+    @include tooltip('Vote Count');
+    left: 10%;
+  }
+}

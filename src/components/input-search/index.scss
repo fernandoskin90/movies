@@ -1,0 +1,17 @@
+.input-search {
+  $color-input: white;
+
+  border: none;
+  background: none;
+  border-bottom: solid 1px $color-input;
+  color: $color-input;
+  font-size: 1rem;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &::placeholder {
+    color: $color-input;
+  }
+}
