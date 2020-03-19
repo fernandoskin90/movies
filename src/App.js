@@ -2,6 +2,9 @@ import React from 'react';
 import { Layout } from 'antd';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
+//@Components
+import { MenuTop } from './components/Menu';
+
 //@ Pages
 import { Home } from './pages/home';
 import { Movie } from './pages/movie';
@@ -14,9 +17,11 @@ function App() {
   const { Header, Content } = Layout;
   return (
     <Layout>
-      <Header>Header</Header>
-      <Content>
-        <Router basename="/">
+      <Router basename="/">
+        <Header>
+          <MenuTop />
+        </Header>
+        <Content>
           <Switch>
             <Route path="/" exact={true} component={Home} />
             <Route path="/new-movies" exact={true} component={NewMovies} />
@@ -25,8 +30,8 @@ function App() {
             <Route path="/movie/:id" exact={true} component={Movie} />
             <Route path="*" exact={true} component={Error404} />
           </Switch>
-        </Router>
-      </Content>
+        </Content>
+      </Router>
     </Layout>
   );
 }
