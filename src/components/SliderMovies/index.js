@@ -2,10 +2,11 @@ import React from 'react';
 import { Carousel, Button } from 'antd';
 import { Link } from 'react-router-dom';
 import './slider.scss';
+import { Loading } from '../Loading';
 
 export const SliderMovies = ({ movies }) => {
   if (movies.loading || !movies.results) {
-    return 'Loading....';
+    return <Loading />;
   }
 
   const { results } = movies.results;
